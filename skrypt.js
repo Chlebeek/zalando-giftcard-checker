@@ -35,18 +35,18 @@ function loop(delay) {
     setTimeout(function() {
         let code = genCode();
         console.log("Checking " + code + ".");
-		//Wpisanie kodu w odpowiednie miejsce
+	//Wpisanie kodu w odpowiednie miejsce
         document.getElementsByClassName("cDRR43 WOeOAB _0Qm8W1 _7Cm1F9 FxZV-M bsVOrE mo6ZnF dUMFv9 K82if3 LyRfpJ pVrzNP NN8L-8 QGmTh2 Vn-7c-")[0].value = code;
         //Kliknięcie przycisku sprawdzającego kodu
-		document.getElementsByClassName("DJxzzA u9KIT8 uEg2FS U_OhzR ZkIJC- Vn-7c- FCIprz heWLCX JIgPn9 LyRfpJ pxpHHp Md_Vex NN8L-8 GTG2H9 MfX1a0 WCjo-q EKabf7 aX2-iv r9BRio mo6ZnF  E6Km4r")[0].click();
-		
-		while(alreadyUsed.includes(code)){
-			console.log("Kod się powtórzył.")
-			code = genCode();
-	
-		}
-		
-		alreadyUsed.push(code);
+	document.getElementsByClassName("DJxzzA u9KIT8 uEg2FS U_OhzR ZkIJC- Vn-7c- FCIprz heWLCX JIgPn9 LyRfpJ pxpHHp Md_Vex NN8L-8 GTG2H9 MfX1a0 WCjo-q EKabf7 aX2-iv r9BRio mo6ZnF  E6Km4r")[0].click();
+
+	while(alreadyUsed.includes(code)){
+		console.log("Kod się powtórzył.")
+		code = genCode();
+
+	}
+
+	alreadyUsed.push(code);
         loop(delay);
         
     }, delay);
